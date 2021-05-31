@@ -14,7 +14,7 @@
 
         <div class="row">
             <div class="form-group col-md-6">
-                <label for="nome">Nome</label>
+                <label for="nome">Nome do Reagente</label>
                 <input id="nome" type="text" class="form-control" required autofocus>
             </div>
 
@@ -24,39 +24,49 @@
             </div>
 
             <div class="form-group col-md-3 col-sm-6">
-                <label for="codProduto">Código do produto</label>
+                <label for="codProduto">Código do Reagente</label>
                 <input id="codProduto" type="number" name="codProduto" class="form-control" required>
             </div>
 
             <div class="form-group col-md-3 col-sm-6">
-                <label for="precoUnitario">Preço unitário</label>
-                <input id="precoUnitario" type="number" name="precoUnitario" class="form-control" required>
+                <label for="dataInscricao">Data de Aquisição</label>
+                <input id="dataInscricao" type="date" name="dataInscricao" class="form-control" required>
             </div>
-
             <div class="form-group col-md-3 col-sm-6">
-                <label for="dataInscricao">Data de inscrição</label>
+                <label for="dataInscricao">Data de validade</label>
                 <input id="dataInscricao" type="date" name="dataInscricao" class="form-control" required>
             </div>
 
             <div class="form-group col-md-3">
-                <label for="status">Status</label>
-                <input id="status" type="text" name="status" class="form-control" required>
+                <label for="status">Marca</label>
+                <input id="marca" type="text" name="marca" class="form-control" required>
             </div>
 
-            <div class="form-group col-md-3">
-                <label for="categoria">Categoria</label>
+           <div class="form-group col-md-3">
+                <label for="categoria">Unidade de medida</label>
                 <select id="categoria" name="categoria" class="form-control" required>
                     <option disabled="" selected>Escolha uma categoria</option>
-                    <option value="">Categoria 1</option>
-                    <option value="">Categoria 2</option>
-                    <option value="">Categoria 3</option>
+                    <option value="">ml</option>
+                    <option value="">g</option>
+                    <option value="">outros</option>
+                    
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="categoria">Orgão fiscalizador</label>
+                <select id="categoria" name="categoria" class="form-control" required>
+                    <option disabled="" selected>Escolha uma categoria</option>
+                    <option value="">Polícia Federal</option>
+                    <option value="">Exército</option>
+                    <option value="">Polícia Civil</option>
+                    <option value="">Ibama</option>
+                    <option value="">Controle Interno</option>
+                    
                 </select>
             </div>
 
-            <div class="form-group col-md-3 col-sm-6">
-                <label for="qtdEstoque">Quantidade estoque</label>
-                <input id="qtdEstoque" type="number" name="qtdEstoque" class="form-control" required>
-            </div>
+
+
 
             <div class="form-group col-md-3 col-sm-6">
                 <label for="estoqueMinimo">Estoque mínimo</label>
@@ -64,23 +74,30 @@
             </div>
 
             <div class="form-group col-md-3 col-sm-6">
-                <label for="quantidade">Quantidade</label>
+                <label for="quantidade">Quantidade recebida</label>
                 <input id="quantidade" type="number" name="quantidade" class="form-control" required>
-            </div>
-
-            <div class="form-group col-md-3 col-sm-6">
-                <label for="quantidadeMinima">Quantidade mínima no estoque</label>
-                <input id="quantidadeMinima" type="number" name="quantidadeMinima" class="form-control" required>
-            </div>
+            </div> 
 
             <div class="form-group col-md-6">
-                <label for="formulaCaracteristica">Fórmula caracteristica</label>
+                <label for="formulaCaracteristica">Fórmula característica</label>
                 <input id="formulaCaracteristica" type="text" name="formulaCaracteristica" class="form-control"
                     required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="fornecedor">Fornecedor</label>
+                <label for="fornecedor">Ficha de segurança</label>
+                <input id="fornecedor" type="text" name="fornecedor" class="form-control" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="fornecedor">Nota Fiscal</label>
+                <input id="fornecedor" type="text" name="fornecedor" class="form-control" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="fornecedor">Localização</label>
+                <input id="fornecedor" type="text" name="fornecedor" class="form-control" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="fornecedor">Outros documentos</label>
                 <input id="fornecedor" type="text" name="fornecedor" class="form-control" required>
             </div>
 

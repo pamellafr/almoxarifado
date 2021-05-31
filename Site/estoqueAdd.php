@@ -12,7 +12,7 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Adicionar</h1>
+    <h1 class="h3 mb-0 text-gray-800">Autorizações</h1>
   </div>
   
 </div>
@@ -29,15 +29,23 @@
                 <thead class="thead-dark table table-hover">
                     <tr>
                         <div class="col-md-12">
-                            <th scope="col">Produto </th>
-                            <th scope="col">Quantidade </th>
-                            <th scope="col">Adicionar</th>
+                            <th scope="col">Carimbo data/hora </th>
+                            <th scope="col"> Email</th>
+                             <th scope="col"> Nome completo do aluno ou servidor  </th>
+                             <th scope="col"> R.A SIAPE ou similar </th>
+                              <th scope="col"> Email do aluno ou servidor que irá autorizar </th>
+                            <th scope="col"> Curso do aluno ou servidor</th>
+                            <th scope="col"> Finalidade de uso</th>
+                            <th scope="col"> Sobre a pessoa que você autorizou</th>
+                            <th scope="col"> Sobre você</th>
+                            <th scope="col"> Data de validação de autorização</th>
+                            <th scope="col"> Nome professor</th>
                             </div>
                     </tr>
 
                 </thead>
                 <tbody style="color: black">
-                <div>
+               <!-- <div>
                     <tr>
                         <td>Item1</td>
                         <th scope="row">1</th>
@@ -160,7 +168,7 @@
                 </tbody>
             </table>
         </div> <br><br>
-
+         -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>

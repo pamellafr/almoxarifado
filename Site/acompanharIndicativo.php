@@ -29,7 +29,7 @@
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h1 mb-0 text-gray-800" style="font-weight: bold;">Relação de empréstimo
+            <h1 class="h1 mb-0 text-gray-800" style="font-weight: bold;">Indicativo de compras
             </h1>
         </div>
 
@@ -48,22 +48,18 @@
                 <i style="color: white" class="fa fa-search"></i>
                 Ordenar por
             </button>
-
+             <!--
             <div class="dropdown-menu" aria-labelledby="dropdownOrderButton">
-            <a class="dropdown-item" onclick="sortTable(0)" href="#">Identificação</a>
-            <a class="dropdown-item" onclick="sortTable(1)" href="#">Data de aquisição</a>
-            <a class="dropdown-item" onclick="sortTable(2)" href="#">Data de devolução</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Email do professor responsável</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Professor responsável</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Nome do aluno ou servidor</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Ra do aluno</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Tipo de usuárior</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Tipo de material</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Equipamento/material/Ferramenta</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Patrimônio/Quantidade</a>
-            <a class="dropdown-item" onclick="sortTable(3)" href="#">Observação</a>
-            <a class="dropdown-item" onclick="sortTable(5)" href="#">Efetuado por:</a>
-        </div>
+                <a class="dropdown-item" onclick="sortTable(0)" href="#">Nome</a>
+                <a class="dropdown-item" onclick="sortTable(1)" href="#">Email aluno</a>
+                <a class="dropdown-item" onclick="sortTable(4)" href="#">Número da ordem de empréstimo</a>
+                <a class="dropdown-item" onclick="sortTable(5)" href="#">Data da retirada</a>
+                <a class="dropdown-item" onclick="sortTable(6)" href="#">Data do vencimento</a>
+                <a class="dropdown-item" onclick="sortTable(7)" href="#">lista materiais</a>
+                <a class="dropdown-item" onclick="sortTable(8)" href="#">Professor responsável</a>
+                <a class="dropdown-item" onclick="sortTable(9)" href="#">Email professor</a>
+                <!--estou acrescentando as mesmas linhas pra ver se da certo, por fim alterei as ordens ok-->
+            </div>
 
             <!--Botão do Filtro-->
             <button class="btn btn-danger1 dropdown-toggle" type="button" id="dropdownOrderButton"
@@ -71,51 +67,45 @@
                 <i style="color: white" class="fa fa-filter"></i>
                 Filtrar por
             </button>
-
+             <!--
             <div class="dropdown-menu" aria-labelledby="dropdownOrderButton">
-            <a class="dropdown-item" href="#">Identificação</a>
-            <a class="dropdown-item" href="#">Data de aquisição</a>
-            <a class="dropdown-item" href="#">Data de devolução</a>
-            <a class="dropdown-item" href="#">Email do professor responsável</a>
-            <a class="dropdown-item" href="#">Professor responsável</a>
-            <a class="dropdown-item" href="#">Nome do aluno ou servidor</a>
-            <a class="dropdown-item" href="#">Ra do aluno</a>
-            <a class="dropdown-item" href="#">Tipo de usuárior</a>
-            <a class="dropdown-item" href="#">Tipo de material</a>
-            <a class="dropdown-item" href="#">Equipamento/material/Ferramenta</a>
-            <a class="dropdown-item" href="#">Patrimônio/Quantidade</a>
-            <a class="dropdown-item" href="#">Observação</a>
-            <a class="dropdown-item" href="#">Efetuado por:</a>
+                <a class="dropdown-item" href="#">Nome</a>
+                <a class="dropdown-item" href="#">Email aluno</a>
+                <a class="dropdown-item" href="#">Número da ordem de empréstimo</a>
+                <a class="dropdown-item" href="#">Data da retirada</a>
+                <a class="dropdown-item" href="#">Data do vencimento</a>
+                <a class="dropdown-item" href="#">Lista de materiais</a>
+                <a class="dropdown-item" href="#">Professor responsável</a>
+                <a class="dropdown-item" href="#">Email professor</a>
+            </div>
         </div>
-        </div>
+            
 
         <div style="overflow: auto;width:100%; height: 500px; border:solid 1px">
             <table id="table" class="table table-striped table-hover table-bordered">
                 <thead class="thead-dark table table-hover">
                     <tr>
                         <div class="col-md-12">
-                <th scope="col">Identificação</th>
-                <th scope="col">Data de aquisição</th>
-                <th scope="col">Data de devolução</th>
-                <th scope="col">Email do professor</th>
-                <th scope="col">Professor responsável</th>
-                <th scope="col">Nome do aluno ou servidor</th>
-                <th scope="col">Ra do aluno</th>
-                <th scope="col">Tipo de usuário</th>
-                <th scope="col">Tipo de material</th>
-                <th scope="col">Equipamento/material/Ferramenta</th>
-                <th scope="col">Patrimônio/Quantidade</th>
-                <th scope="col">Observação</th>
-                <th scope="col">Efetuado por:</th>
-                <th scope="col">Situação</th>
-                    </div>
-     
+                            <th scope="col">Nome </th>
+                            <th scope="col">Email aluno</th>
+                            <th scope="col">Número da ordem de empréstimo</th>
+                            <th scope="col">Data da retirada</th>
+                            <th scope="col">Data do vencimento</th>
+                            <th scope="col">Lista dos materiais</th>
+                            <th scope="col">Professor responsável</th>
+                            <th scope="col">Email professor</th>
+                           
+                        </div>
                     </tr>
 
                 </thead>
                
             </table>
-        </div> <br><br>
+        </div> --><br><br>
+
+        <a href="agendar.php"><button type="button" class="btn btn-secondary">Adicionar</button></a>
+
+
         <!--Jquery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

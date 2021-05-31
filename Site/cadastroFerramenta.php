@@ -21,22 +21,40 @@
                     required="required">
             </div>
 
+            <div class="form-group col-md-3 col-sm-6">
+                <label for="codEstoque">Código do estoque</label>
+                <input id="codEstoque" type="number" name="codEstoque" class="form-control" required>
+            </div>
 
+            <div class="form-group col-md-3 col-sm-6">
+                <label for="codProduto">Código da ferramenta</label>
+                <input id="codProduto" type="number" name="codProduto" class="form-control" required>
+            </div>
+             <div class="form-group col-md-5 col-sm-6">
+                <label for="datadeaquisicao">Data de Aquisição</label>
+                <input type="date" class="form-control" id="datadeaquisicao" required="required">
+            </div>
             <div class="form-group col-md-5 col-sm-6">
                 <label for="marca">Marca</label>
                 <input type="text" class="form-control" id="marca" required="required" placeholder="Informe a marca">
             </div>
-        </div>
-
-        <div class="row">
-            <div class="form-group col-md-5 col-sm-6">
-                <label for="quantidade">Quantidade de estoque</label>
-                <input type="number" class="form-control" id="quantidade" required="required"
-                    placeholder="Informe a quantidade">
-            </div>
-            <div class="form-group col-md-5 col-sm-6">
+              <div class="form-group col-md-5 col-sm-6">
                 <label for="modelo">Modelo</label>
                 <input type="text" class="form-control" id="modelo" required="required" placeholder="Informe o modelo">
+            </div>
+            <div class="form-group col-md-5 col-sm-6">
+
+                <label for="fornecedor">Fornecedor</label>
+                <input type="text" class="form-control" id="fornecedor" required="required"
+                    placeholder="Informe o fornecedor">
+        </div>
+  
+            </div>
+        <div class="row">
+            <div class="form-group col-md-5 col-sm-6">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" class="form-control" id="quantidade" required="required"
+                    placeholder="Informe a quantidade">
             </div>
         </div>
 
@@ -48,22 +66,6 @@
                     placeholder="Informe a quantidade">
             </div>
 
-            <div class="form-group col-md-5 col-sm-6">
-                <label for="datadeaquisicao">Data de Aquisição</label>
-                <input type="date" class="form-control" id="datadeaquisicao" required="required">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="form-group col-md-5 col-sm-6">
-                <label for="datadeinscricao">Data de inscrição</label>
-                <input type="date" class="form-control" id="datadeinscricao" required="required">
-            </div>
-            <div class="form-group col-md-5 col-sm-6">
-                <label for="codigo">Codigo</label>
-                <input type="number" class="form-control" id="codigo" required="required" placeholder="Ex: xxxxxx">
-
-            </div>
         </div>
 
         <div class="row">
@@ -71,12 +73,6 @@
 
                 <label for="patrimonio">Patrimonio</label>
                 <input type="text" class="form-control" id="patrimonio" required="required" placeholder="Ex: xxxxxx">
-            </div>
-            <div class="form-group col-md-5 col-sm-6">
-
-                <label for="fornecedor">Fornecedor</label>
-                <input type="text" class="form-control" id="fornecedor" required="required"
-                    placeholder="Informe o fornecedor">
             </div>
         </div>
         <div class="mt-4">

@@ -7,8 +7,9 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Baixa</h1>
+    <h1 class="h3 mb-0 text-gray-800">Baixas</h1>
   </div>
+  
 
 <!-- Inicio da tabela -->
 <div class="mt-3" style="height: 300px; overflow: auto;position: relative; display: block;">
@@ -20,50 +21,47 @@
                 <select class="custom-select " id="sexo " required autocomplete=“off”>
                     <option disabled selected>Selecione uma opção...</option>
                     <!-- Aqui vai ficar as opções que vem do php do estoque -->
-                    <option value="masculino ">Consumível</option>
-                    <option value="feminino "> Permanente</option>
+                    <option value="masculino ">ÁLCOOL ETÍLICO ABSOLUTO</option>
+                    <option value="feminino ">Acetato de sódio anidro</option>
                 </select>
             </div>
        <div class="form-group col-md-6 ">
-                <label for="sexo ">Equipamento / material</label>
+                <label for="sexo ">Finalidade destino de uso</label>
                 <select class="custom-select " id="sexo " required autocomplete=“off”>
                     <option disabled selected>Selecione uma opção...</option>
-                    <!-- esses equipamentos e materiais são os que estão em estoque -->
-                    <option value="masculino ">ALCOOL ISOPROPÍLICO FRASCO 1 L</option>
-                    <option value="masculino ">ALICATE AMPERÍMETRO DIGITAL</option>
-                    <option value="masculino ">BATERIA CAPACITIVA 50F / 22AH -PYLE LINK</option>
-                     <option value="masculino ">KIT LEGO PRINCIPAL – EV3 (KLB-0006)</option>
-                </select>
-            </div>   
-            <div class="form-group col-md-6 ">
-                <label for="sexo ">Descritivo</label>
-                <select class="custom-select " id="sexo " required autocomplete=“off”>
-                    <option disabled selected>Selecione uma opção...</option>
-                    <!-- esses equipamentos e materiais são os que estão em estoque -->
-                    <option value="masculino ">Recuperado</option>
-                    <option value="masculino ">Quebrado ou Imobilizado</option>
+                    <!-- Apartir dessas opções que vai cair na planilha de relatórios -->
+                    <option value="masculino ">Ensino</option>
+                    <option value="masculino ">Pesquisa</option>
+                    <option value="masculino ">Extensão</option>
+                     <option value="masculino ">CDPC</option>
                 </select>
             </div>   
           <div class="form-group  col-md-6  ">
-                <label for="numero ">Patrimonio / Quantidade</label>
-                <!-- aqui vai depender de qual material ou equipamento é para dar as opções-->
+                <label for="numero ">Quantidade (da unidade de medida)</label>
+                <!--ficou confuso esse da quantidade de medida -->
                 <input type="number " class="form-control " id="numero " name="numero "
                     onkeypress="return ApenasNumeros(event,this)" required autocomplete=“off”>
             </div>   
           <div class="form-group  col-md-6  ">
-                <label for="bairro ">Observações</label>
+                <label for="bairro ">Marca</label>
                 <input type="text " class="form-control " id="bairro " name="bairro "
                     onkeypress="return ApenasLetras(event,this)" required autocomplete=“off”>
             </div>  
            <div class="form-group  col-md-6 ">
-            <label for="data">Data da baixa</label>
+            <label for="data">Data de validade</label>
             <input type="date" class="form-control" id="data">
              </div>
-
+          <div class="form-group  col-md-6  ">
+                <label for="numero ">Quantidade Disponível para retirada</label>
+                <!-- essa quantidade vem do estoque disponível para cada areá extensão,ensino,pesquisa e CDPC -->
+                <input type="number " class="form-control " id="numero " name="numero "
+                    onkeypress="return ApenasNumeros(event,this)" required autocomplete=“off”>
+            </div>  
         </div>
     </form>
-      <!-- Botão de x <td><button class="btn btn-danger btn-md " ><i class="fas fa-times"></i></button> 
-    
+	
+
+      <!--
 	<th  scope="row">2</th>
       <td>Bequer</td>
       <td>10</td>
@@ -93,7 +91,7 @@
   	</tr>
 	</tbody>
 </table>
-</div> fim tabela--> 
+</div> <!-- fim tabela--> 
 
 <!-- Metodos -->
 
@@ -152,4 +150,4 @@ $('#modalsucesso').on('shown.bs.modal', function () {
 </script>
 <?php
     require_once("./rodape.php");
-?>  
+?> 

@@ -15,13 +15,13 @@
         <div class="form-group">
             <label for="data">Data de uso</label>
             <input type="date" class="form-control" id="data">
-
+        </div>
             <div class="form-group">
                 <label for="hora">Hora</label>
                 <input type="time" class="form-control" id="hora">
             </div>
             <div class="form-group">
-                <label for="sala">Sala</label>
+                <label for="sala">Laboratório</label>
                 <input type="number" class="form-control" id="sala">
             </div>
             <div class="form-group">
@@ -52,15 +52,7 @@
             </div>
     </form>
 
-
-
-
-
-
-
-
 </div>
-<!-- /.container-fluid -->
 <?php
-    require_once("./rodape.php");
+    require_once("./rodape.php ");
 ?>

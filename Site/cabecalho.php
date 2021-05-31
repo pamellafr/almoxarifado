@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- é nesse arquivo que eu mudo as opções da barra esquerda-->
 <head>
 
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Stock Control</title>
+  <title> COLAB </title>
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -24,25 +24,27 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    <!-- Sidebar -->
+    <!-- Sidebar ( barra lateral )-->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <!-- Sidebar - Brand -->
+      <!-- Sidebar - Brand ( marca )-->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-campground"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Stock Control</div>
+        <div class="sidebar-brand-text mx-3"> COLAB </div>
       </a>
 
-      <!-- Divider -->
+      <!-- Divider (linha) -->
       <hr class="sidebar-divider my-0">
 
       <?php $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);?> <!-- Pega o nome da pág atual -->
 
       <!-- Nav Item - Dashboard -->
-      <li <?php if($paginaCorrente == 'index.php') {echo 'class="nav-item active"';} ?> class="nav-item">
-        <a class="nav-link" href="index.php">
+      <li 
+      <?php if($paginaCorrente == 'index.php') 
+      {echo 'class="nav-item active"';} ?> class="nav-item">
+          <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-home"></i>
           <span>Home</span></a>
       </li>
@@ -51,8 +53,10 @@
       <hr class="sidebar-divider">
 
       <!-- Nav Item - Charts -->
-      <li <?php if($paginaCorrente == 'agendar.php') {echo 'class="nav-item active"';} ?> class="nav-item">
-        <a class="nav-link" href="agendar.php">
+      <li
+       <?php if($paginaCorrente == 'agendar.php')
+       {echo 'class="nav-item active"';} ?> class="nav-item">
+           <a class="nav-link" href="agendar.php">
           <i class="far fa-fw fa-calendar-alt"></i>
           <span>Agendar</span></a>
       </li>
@@ -61,27 +65,27 @@
       <li
         <?php
           if($paginaCorrente == 'cadastroUsuario.php' || 
-              $paginaCorrente == 'cadastroFornecedor.php' || 
-              $paginaCorrente == 'cadastroSala.php' || 
-              $paginaCorrente == 'cadastroReagente.php' || 
-              $paginaCorrente == 'cadastroMaterial.php' || 
-              $paginaCorrente == 'cadastroFerramenta.php') 
+                $paginaCorrente == 'cadastroFornecedor.php' || 
+                $paginaCorrente == 'cadastroReagente.php' || 
+                $paginaCorrente == 'cadastroMaterial.php' || 
+                $paginaCorrente == 'cadastroFerramenta.php'||
+                $paginaCorrente == 'cadastroAutorizacao.php') 
             {echo 'class="nav-item active"';} 
         ?> class="nav-item">
 
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
           <i class="far fa-fw fa-plus-square"></i>
           <span>Cadastrar</span>
         </a>
 
-        <div id="collapseOne"
+        <div id="collapse1"
           <?php
             if($paginaCorrente == 'cadastroUsuario.php' || 
                 $paginaCorrente == 'cadastroFornecedor.php' || 
-                $paginaCorrente == 'cadastroSala.php' || 
                 $paginaCorrente == 'cadastroReagente.php' || 
                 $paginaCorrente == 'cadastroMaterial.php' || 
-                $paginaCorrente == 'cadastroFerramenta.php') 
+                $paginaCorrente == 'cadastroFerramenta.php'||
+                $paginaCorrente == 'cadastroAutorizacao.php') 
               {echo 'class="collapse show"';}
           ?>
           class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
@@ -91,87 +95,189 @@
 
             <a <?php if($paginaCorrente == 'cadastroFornecedor.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="cadastroFornecedor.php">Fornecedor</a>
 
-            <a <?php if($paginaCorrente == 'cadastroSala.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="cadastroSala.php">Sala</a>
-
             <a <?php if($paginaCorrente == 'cadastroReagente.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="cadastroReagente.php">Reagente</a>
 
             <a <?php if($paginaCorrente == 'cadastroMaterial.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="cadastroMaterial.php">Material</a>
 
             <a <?php if($paginaCorrente == 'cadastroFerramenta.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="cadastroFerramenta.php">Ferramenta</a>
+
+            <a <?php if($paginaCorrente == 'cadastroAutorizacao.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="cadastroAutorizacao.php">Autorizações</a>
+
           </div>
         </div>
       </li>
 
       <li
         <?php
-          if($paginaCorrente == 'estoqueRelatorio.php' || 
-              $paginaCorrente == 'estoqueAdd.php' || 
-              $paginaCorrente == 'estoqueRemover.php' || 
-              $paginaCorrente == 'estoqueEmprestimo.php') 
+          if($paginaCorrente == 'estoqueEmprestimo.php' || 
+              $paginaCorrente == 'estoqueDevo.php') 
             {echo 'class="nav-item active"';} 
         ?> class="nav-item">
 
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
           <i class="fas fa-fw fa-table"></i>
-          <span>Estoque</span>
+          <span>Empréstimo/Devolução</span>
         </a>
-        <div id="collapseTwo" 
+        <div id="collapse2" 
           <?php
-            if($paginaCorrente == 'estoqueRelatorio.php' || 
-                $paginaCorrente == 'estoqueAdd.php' || 
-                $paginaCorrente == 'estoqueRemover.php' || 
-                $paginaCorrente == 'estoqueEmprestimo.php') 
+            if($paginaCorrente == 'estoqueEmprestimo.php' ||  
+                $paginaCorrente == 'estoqueDevo.php') 
               {echo 'class="collapse show"';} 
           ?> 
           class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 
           <div class="bg-white py-2 collapse-inner rounded">
-            <a <?php if($paginaCorrente == 'estoqueRelatorio.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="estoqueRelatorio.php">Relatorio geral</a>
+            
 
-            <a <?php if($paginaCorrente == 'estoqueAdd.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="estoqueAdd.php">Adicionar</a>
+            <a <?php if($paginaCorrente == 'estoqueEmprestimo.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="estoqueEmprestimo.php">Empréstimos</a>
 
-            <a <?php if($paginaCorrente == 'estoqueRemover.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="estoqueRemover.php">Remover</a>
+            <a <?php if($paginaCorrente == 'estoqueDevo.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="estoqueDevo.php">Devoluções</a>
 
-            <a <?php if($paginaCorrente == 'estoqueEmprestimo.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="estoqueEmprestimo.php">Emprestimo</a>
           </div>
         </div>
       </li>
+      
+      <li
+        <?php
+          if($paginaCorrente == 'estoqueQuimicaInfo.php'||
+              $paginaCorrente == 'estoqueEstoque.php') 
 
+            {echo 'class="nav-item active"';} 
+        ?> class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Estoque</span>
+        </a>
+        <div id="collapse3" 
+          <?php
+            if($paginaCorrente == 'estoqueQuimicaInfo.php'||
+              $paginaCorrente == 'estoqueEstoque.php') 
+              {echo 'class="collapse show"';} 
+          ?> 
+          class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+
+          <div class="bg-white py-2 collapse-inner rounded">
+            
+
+            <a <?php if($paginaCorrente == 'estoqueQuimicaInfo.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="estoqueQuimicaInfo.php">Estoque Química</a>
+            <!-- planilha relatório, estoque remanescente quer dizer que já é com as baixas  -->
+
+             <a <?php if($paginaCorrente == 'estoqueEstoque.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="estoqueEstoque.php">Estoque Geral</a>
+
+
+
+          </div>
+        </div>
+      </li>
+       <li
+        <?php
+          if($paginaCorrente == 'estoqueRemover.php'||
+              $paginaCorrente == 'estoqueQuimicaBaixas.php') 
+            {echo 'class="nav-item active"';} 
+        ?> class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Baixas do Estoque</span>
+        </a>
+        <div id="collapse4" 
+          <?php
+            if($paginaCorrente == 'estoqueRemover.php'||
+              $paginaCorrente == 'estoqueQuimicaBaixas.php') 
+              {echo 'class="collapse show"';} 
+          ?> 
+          class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+
+          <div class="bg-white py-2 collapse-inner rounded">
+            
+
+            <a <?php if($paginaCorrente == 'estoqueQuimicaBaixas.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="estoqueQuimicaBaixas.php">Baixas Estoque Química</a>
+            <!-- planilha relatório, estoque remanescente quer dizer que já é com as baixas  -->
+
+             <a <?php if($paginaCorrente == 'estoqueRemover.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="estoqueRemover.php">Baixas Estoque Geral</a>
+
+
+
+          </div>
+        </div>
+      </li>
+      </li>
       <!-- Nav Item - Utilities Collapse Menu -->
       <li
         <?php
           if($paginaCorrente == 'acompanhaFalha.php' || 
+             $paginaCorrente == 'acompanharIndicativo.php' ||
               $paginaCorrente == 'acompanhaAgenda.php' || 
-              $paginaCorrente == 'acompanhaDisponivel.php' || 
-              $paginaCorrente == 'acompanhaEsprestimo.php') 
+              $paginaCorrente == 'acompanhaDisponivel.php') 
             {echo 'class="nav-item active"';} 
         ?> class="nav-item">
 
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
           <i class="far fa-fw fa-list-alt"></i>
           <span>Acompanhar</span>
         </a>
-        <div id="collapseUtilities"
+        <div id="collapse5"
         <?php
-          if($paginaCorrente == 'acompanhaFalha.php' || 
+          if( $paginaCorrente == 'acompanhaFalha.php' || 
+              $paginaCorrente == 'acompanharIndicativo.php' ||
               $paginaCorrente == 'acompanhaAgenda.php' || 
-              $paginaCorrente == 'acompanhaDisponivel.php' || 
-              $paginaCorrente == 'acompanhaEsprestimo.php') 
+              $paginaCorrente == 'acompanhaDisponivel.php') 
             {echo 'class="collapse show"';} 
         ?>
         class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a <?php if($paginaCorrente == 'acompanhaFalha.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="acompanhaFalha.php">Falha</a>
+            <a <?php if($paginaCorrente == 'acompanhaFalha.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="acompanhaFalha.php">Falha dos equipamentos</a>
+
+            <a <?php if($paginaCorrente == 'acompanharIndicativo.php') {echo 'class="collapse-item active"';} ?>class="collapse-item" href="acompanharIndicativo.php">Indicativo de compras</a>
 
             <a <?php if($paginaCorrente == 'acompanhaAgenda.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="acompanhaAgenda.php">Agendamento</a>
 
             <a <?php if($paginaCorrente == 'acompanhaDisponivel.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="acompanhaDisponivel.php">Disponibilidade</a>
 
-            <a <?php if($paginaCorrente == 'acompanhaEsprestimo.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="acompanhaEsprestimo.php">Emprestimo</a>
           </div>
         </div>
       </li>
+      <!-- criando uma aba relatório 25/05 estilo acompanhar-->
+      <li
+        <?php
+          if ($paginaCorrente == 'relatorioExtensão.php' || 
+              $paginaCorrente == 'relatorioPesquisa.php' || 
+              $paginaCorrente == 'relatorioCDPC.php' || 
+              $paginaCorrente == 'relatorioFornecedores.php'||
+              $paginaCorrente == 'relatorioAutorizados.php'||
+            $paginaCorrente == 'estoqueRelatorio.php') 
+            {echo 'class="nav-item active"';} 
+        ?> class="nav-item">
 
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+          <i class="far fa-fw fa-list-alt"></i>
+          <span>Relatórios</span>
+        </a>
+        <div id="collapse6"
+        <?php
+          if( $paginaCorrente == 'relatorioExtensão.php' || 
+              $paginaCorrente == 'relatorioPesquisa.php' || 
+              $paginaCorrente == 'relatorioCDPC.php' || 
+              $paginaCorrente == 'relatorioFornecedores.php'||
+              $paginaCorrente == 'relatorioAutorizados.php') 
+            {echo 'class="collapse show"';} 
+        ?>
+        class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a <?php if($paginaCorrente == 'relatorioExtensão.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="relatorioExtensão.php">Extensão</a>
+
+            <a <?php if($paginaCorrente == 'relatorioPesquisa.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="relatorioPesquisa.php">Pesquisa</a>
+
+            <a <?php if($paginaCorrente == 'relatorioCDPC.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="relatorioCDPC.php">CDPC</a>
+
+            <a <?php if($paginaCorrente == 'relatorioFornecedores.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="relatorioFornecedores.php">Fornecedores</a>
+
+            <a <?php if($paginaCorrente == 'relatorioAutorizados.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="relatorioAutorizados.php">Autorizados</a>
+
+            <a <?php if($paginaCorrente == 'estoqueRelatorio.php') {echo 'class="collapse-item active"';} ?> class="collapse-item" href="estoqueRelatorio.php">Relação de empréstimo</a>
+
+          </div>
+        </div>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider">
 

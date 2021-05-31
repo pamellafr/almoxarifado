@@ -7,7 +7,7 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Baixa</h1>
+    <h1 class="h3 mb-0 text-gray-800">Baixa Química</h1>
   </div>
 
 <!-- Inicio da tabela -->
@@ -16,7 +16,7 @@
 <form action="index.php" method="get">
         <div class="form-row">
      <div class="form-group col-md-6 ">
-                <label for="sexo ">Tipo de material</label>
+                <label for="sexo">Tipo de material</label>
                 <select class="custom-select " id="sexo " required autocomplete=“off”>
                     <option disabled selected>Selecione uma opção...</option>
                     <!-- Aqui vai ficar as opções que vem do php do estoque -->
